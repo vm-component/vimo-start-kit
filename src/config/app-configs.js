@@ -5,7 +5,9 @@
  *
  * 包括domain/url/AK/ssecretID等
  *
+ * 主要存放合成变量
+ *
  */
 export default {
-  domain: '' // http://gamma-member.tesir.top
+  getMemberUrl: window.domain + '/member'
 };

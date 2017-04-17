@@ -34,7 +34,12 @@
       return {
         msg: 'Welcome to  Vimo!'
       }
-    }
+    },
+    methods:{
+      getData(){
+        this.$config.get('getMemberUrl')
+      }
+    },
   }
 </script>
 
