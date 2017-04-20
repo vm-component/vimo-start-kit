@@ -4,18 +4,18 @@
 
 ## 目录
 ```
-| - build 构建工具配置	
-| - config 构建工具配置	
-| - dist 打包后的文件夹
-| - src 业务相关
-| --- assets 资源文件
-| --- components 业务部分
-| --- config 配置
-| ----- app-configs.js 业务配置
-| ----- platform-configs.js 平台配置
-| --- router 路由
-| --- theme 主题样式
-| - static 静态资源
+| - build     构建工具配置	
+| - config     构建工具配置	
+| - dist     打包后的文件夹
+| - src     业务相关
+| --- assets     资源文件
+| --- components     业务部分
+| --- config     配置
+| ----- app-configs.js     业务配置
+| ----- platform-configs.js     平台配置
+| --- router     路由
+| --- theme     主题样式
+| - static     静态资源
 
 ```
 
