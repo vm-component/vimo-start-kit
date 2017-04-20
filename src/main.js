@@ -8,6 +8,7 @@ import PLATFORM_CONFIGS from './config/platform-configs'
 import APP_CONFIGS from './config/app-configs'
 import attachFastClick from 'fastclick'
 import vimo from 'vimo'
+import vmStorage from 'vm-storage'
 
 new attachFastClick(document.body)
 // 平台基础安装

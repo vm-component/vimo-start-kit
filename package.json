@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "fastclick": "^1.0.6",
-    "vimo": "^0.3.0",
+    "vimo": "^0.3.2",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"
   },
