@@ -4,6 +4,13 @@
             <Navbar>
                 <Title>Hello Vimo</Title>
             </Navbar>
+            <Toolbar>
+                <Segment v-model="choose">
+                    <SegmentButton value="value1">value1</SegmentButton>
+                    <SegmentButton value="value2">value2</SegmentButton>
+                    <SegmentButton value="value3">value3</SegmentButton>
+                </Segment>
+            </Toolbar>
         </Header>
         <Content class="hello">
             <img src="../assets/logo.png">
@@ -28,18 +35,24 @@
     </Page>
 </template>
 <script>
+
+
+  import { Segment, SegmentButton } from 'vimo/components/segment'
+
   export default {
     name: 'hello',
     data () {
       return {
-        msg: 'Welcome to  Vimo!'
+        msg: 'Welcome to  Vimo!',
+        choose: 'value1'
       }
     },
-    methods:{
+    methods: {
       getData(){
         this.$config.get('getMemberUrl')
       }
     },
+    components: {Segment, SegmentButton}
   }
 </script>
 

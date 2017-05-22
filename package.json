@@ -10,8 +10,10 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "better-scroll": "^0.1.15",
     "fastclick": "^1.0.6",
-    "vimo": "^0.3.2",
+    "iscroll": "^5.2.0",
+    "vimo": "^0.4.0",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"
   },
