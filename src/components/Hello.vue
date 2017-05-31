@@ -28,10 +28,7 @@
     </Page>
 </template>
 <script>
-
-
   import { Segment, SegmentButton } from 'vimo/components/segment'
-
   export default {
     name: 'hello',
     data () {
