@@ -8,10 +8,10 @@
     </App>
 </template>
 <script type="text/javascript">
-export default {
-  name: 'app',
-  mounted () {}
-}
+  export default {
+    name: 'app',
+    mounted () { }
+  }
 </script>
 <style lang="scss">
     #app {

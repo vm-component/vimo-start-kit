@@ -35,7 +35,9 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  mounted () {},
+  mounted () {
+    console.log('asdf')
+  },
   components: {
     App
   }

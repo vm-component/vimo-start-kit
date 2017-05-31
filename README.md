@@ -87,6 +87,9 @@ onBridgeReady(plt){
 }
 ```
 
+## 关于不支持ES6语法的问题
+
+参考 [这篇文章](http://www.ruanyifeng.com/blog/2016/01/babel.html)
 
 ## 下一步的计划
 
