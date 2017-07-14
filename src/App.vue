@@ -11,6 +11,4 @@
     mounted () { }
   }
 </script>
-<style lang="scss">
-    @import "./theme/index";
-</style>
+<style lang="scss"></style>

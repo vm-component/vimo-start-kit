@@ -12,6 +12,9 @@ import VueI18n from 'vue-i18n'
 import langCN from './lang/cn'
 import langEN from './lang/en'
 
+// theme
+import './theme/index.scss'
+
 // Create VueI18n instance with options
 Vue.use(VueI18n)
 const i18n = new VueI18n({
@@ -48,6 +51,7 @@ if (process.env.NODE_ENV === 'development') {
   // 发布环境执行此代码
   Vue.config.productionTip = false
 }
+
 
 /* eslint-disable no-new */
 new Vue({
