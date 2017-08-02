@@ -80,7 +80,5 @@
     "iOS >= 5",
     "Android >= 4"
   ],
-  "theme": {
-    "primary": "#1DA57A"
-  }
+  "theme": {}
 }
