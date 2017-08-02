@@ -33,7 +33,7 @@
   import { Loading } from 'vimo/components/loading'
   import { Toast } from 'vimo/components/toast'
   import { Segment, SegmentButton } from 'vimo/components/segment'
-  import { ChooseCity } from 'vimo/components/choose-city'
+//  import { ChooseCity } from 'vimo/components/choose-city'
   export default{
     name: 'Components',
     data () {
@@ -147,14 +147,14 @@
       },
       chooseCity () {
         let _this = this
-        ChooseCity.present({
-          showLocatedCity: true,
-          onDismiss (data) {
-            if (data) {
-              _this.selectCity = data
-            }
-          }
-        })
+//        ChooseCity.present({
+//          showLocatedCity: true,
+//          onDismiss (data) {
+//            if (data) {
+//              _this.selectCity = data
+//            }
+//          }
+//        })
       },
       showToast () {
         Toast('Toast Bottom Only String', 3000)

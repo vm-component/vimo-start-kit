@@ -12,9 +12,6 @@ import VueI18n from 'vue-i18n'
 import langCN from './lang/cn'
 import langEN from './lang/en'
 
-// theme
-import './theme/index.scss'
-
 // Create VueI18n instance with options
 Vue.use(VueI18n)
 const i18n = new VueI18n({

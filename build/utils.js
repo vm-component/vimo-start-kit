@@ -1,7 +1,7 @@
 var path = require('path')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+var existsSync = require('fs').existsSync
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
@@ -11,7 +11,7 @@ exports.assetsPath = function (_path) {
 
 exports.cssLoaders = function (options) {
   options = options || {}
-
+  let theme = getTheme()
   var cssLoader = {
     loader: 'css-loader',
     options: {
@@ -48,7 +48,7 @@ exports.cssLoaders = function (options) {
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    less: generateLoaders('less'),
+    less: generateLoaders('less',{modifyVars: theme}),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),
@@ -68,4 +68,57 @@ exports.styleLoaders = function (options) {
     })
   }
   return output
+}
+
+/**
+ * get theme from package.json
+ * @return {Object} theme
+ * */
+function getTheme () {
+  const pkgPath = path.join(__dirname, '..', 'package.json')
+  const pkg = existsSync(pkgPath) ? require(pkgPath) : {}
+  let theme = {}
+  if (pkg.theme) {
+    // for the type of './theme.js'
+    if (isString(pkg.theme)) {
+      let cfgPath = pkg.theme
+      // relative path
+      if (cfgPath.charAt(0) === '.') {
+        cfgPath = path.join(__dirname, '..', cfgPath)
+      }
+
+      try{
+        const getThemeConfig = require(cfgPath)
+
+        if (getThemeConfig) {
+          if (isObject(getThemeConfig)) {
+            theme = getThemeConfig
+          }
+          if (isFunction(getThemeConfig)) {
+            theme = getThemeConfig() || {}
+          }
+        }
+      }catch (err){
+        console.error(`${err.message} with input position of '${pkg.theme}' at 'package.json' file.`)
+      }
+    }
+    // for the type of '{"primary-color":"#1DA57A"}'
+    if (isObject(pkg.theme)) {
+      theme = pkg.theme
+    }
+  }
+
+  return theme
+}
+
+function isString (val) {
+  return typeof val === 'string'
+}
+
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+function isFunction (val) {
+  return typeof val === 'function'
 }
