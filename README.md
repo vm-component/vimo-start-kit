@@ -14,14 +14,13 @@
 | ----- app-configs.js       业务配置
 | ----- platform-configs.js  平台配置
 | --- router        路由
-| --- theme         主题样式
 | - static          静态资源
+| - package.json    应用配置
 
 ```
 
 
-
-## 开始
+## 如何开始
 
 ``` bash
 # 安装依赖
@@ -37,17 +36,34 @@ npm run build
 npm run build --report
 ```
 
-## 对升级Vimo
+## Vimo版本
 
-```
+Vimo组件库和项目是分离的，因此如果版本有问题可以升级或者回退，下面是改变版本的方法。
+
+```bash
 npm install vimo@x.x.x --save
 ```
 
 ## 关于主题
 
-目前主题是与组件相结合的，分为ios和md两个样式主题。可选择其一之后再此基础上修改样式开发。
 
-## 关于app-configs.js
+### 默认主题
+
+Vimo使用的样式源自IONIC，并且自带`IOS `和`MaterialDesign`两个风格的样式，可以根据业务风格选择其一。
+
+目前组件的主题是与组件相结合的，故不需要额外引入样式。在业务中根据`mode`变量开启，默认使用系统对应样式，比如IOS下使用`ios `主题，安卓下使用`md `主题。
+
+### 组件样式使用Less开发
+
+如果基础变量不满足业务，可以使用`modifyVars `的方式选择一种风格来覆盖变量，以满足业务和品牌上多样化的视觉需求，包括但不限于主色、圆角、边框和部分组件的视觉定制。在具体工程实践中，可以在 `package.theme` 引入变量对象或者变量文件的位置。
+
+此外还可以在业务中覆盖组件样式的方式，这里需要注意样式的生效优先级。
+
+
+## 应用配置
+
+关于app-configs.js
+
 
 这个文件是用于存放应用层级的配置，主要存放合成变量，例如示例：
 
@@ -65,7 +81,9 @@ export default {
 this.$config.get('getMemberUrl')
 ```
 
-## 关于platform-configs.js
+## 平台配置
+
+关于platform-configs.js
 
 Vimo是能感知用户的使用平台的，因此不同平台的初始化可以分开进行，当平台初始化完毕后需要根据平台进行配置，比如微信JSSDK需要完成config配置，这部分可在`onBridgeReady`钩子中进行，变量`plt`是当前平台的实例。
 
@@ -91,9 +109,6 @@ onBridgeReady(plt){
 
 参考 [这篇文章](http://www.ruanyifeng.com/blog/2016/01/babel.html)
 
-## 下一步的计划
-
-因为组件的样式就和人的衣服一样，总是在变，但是在vue文件中抽离样式又违背了vue大一统的思想，因此后续会将整个Vimo项目引入而不是使用npm安装，前提是组件不能有太多bug。
 
 
 
