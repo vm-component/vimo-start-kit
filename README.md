@@ -125,27 +125,19 @@ this.$config.get('getShopUrl')
 export default {
   platforms: {
     ios: {
-      settings: {
 		pageTransition: 'fade-right-transition'
-      }
     },
     android: {
-      settings: {
 		pageTransition: 'zoom-transition'
-      }
     },
     wechat: {
-      settings: {
 		mode:'md',
 		customerSetting: 'Hello Wechat!',
 		hideNavBar: true
-      }
     },
     alipay: {
-      settings: {
 		mode:'ios',
 		hideNavBar: true
-      }
     }
   }
 }
