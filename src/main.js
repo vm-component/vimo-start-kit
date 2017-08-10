@@ -44,11 +44,13 @@ Vue.component(Button.name, Button)
 if (process.env.NODE_ENV === 'development') {
   // 开发环境执行此代码
   Vue.config.productionTip = false
+  Vue.config.warnHandler = (err) => !~err.toString().indexOf('Do not use built-in or reserved HTML elements as component id') && console.error(err)
 } else {
   // 发布环境执行此代码
   Vue.config.productionTip = false
+  Vue.config.silent = true
+  Vue.config.devtools = false
 }
-
 
 /* eslint-disable no-new */
 new Vue({
