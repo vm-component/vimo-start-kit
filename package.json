@@ -15,7 +15,7 @@
     "fastclick": "^1.0.6",
     "iscroll": "^5.2.0",
     "velocity-animate": "^1.5.0",
-    "vimo": "^0.5.6",
+    "vimo": "^0.5.12",
     "vue": "^2.2.2",
     "vue-i18n": "^7.0.4",
     "vue-router": "^2.2.0"
@@ -25,6 +25,7 @@
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-import": "^1.4.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.2.1",
     "babel-preset-es2015": "^6.24.1",

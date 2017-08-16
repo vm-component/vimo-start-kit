@@ -28,13 +28,14 @@
 </template>
 <script type="text/javascript">
   // 全局组件
-  import { ActionSheet } from 'vimo/components/action-sheet'
-  import { Alert } from 'vimo/components/alert'
-  import { Loading } from 'vimo/components/loading'
-  import { Toast } from 'vimo/components/toast'
-  import { Segment, SegmentButton } from 'vimo/components/segment'
-//  import { ChooseCity } from 'vimo/components/choose-city'
-  export default{
+  import { ActionSheet } from 'vimo/lib/action-sheet'
+  import { Alert } from 'vimo/lib/alert'
+  import { Loading } from 'vimo/lib/loading'
+  import { Toast } from 'vimo/lib/toast'
+  import { Segment, SegmentButton } from 'vimo/lib/segment'
+  import { ChooseCity } from 'vimo/lib/choose-city'
+
+  export default {
     name: 'Components',
     data () {
       return {
@@ -147,21 +148,21 @@
       },
       chooseCity () {
         let _this = this
-//        ChooseCity.present({
-//          showLocatedCity: true,
-//          onDismiss (data) {
-//            if (data) {
-//              _this.selectCity = data
-//            }
-//          }
-//        })
+        ChooseCity.present({
+          showLocatedCity: true,
+          onDismiss (data) {
+            if (data) {
+              _this.selectCity = data
+            }
+          }
+        })
       },
       showToast () {
-        Toast('Toast Bottom Only String', 3000)
+        Toast('功能正在开发', 2000)
       },
       loading () {
         Loading.present({
-          content: '正在加载, 2000ms后自动关闭...',
+          content: '正在加载',
           dismissOnPageChange: false, // url变化后关闭loading(默认)
           showBackdrop: true
         })

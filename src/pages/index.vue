@@ -50,7 +50,7 @@
     </Page>
 </template>
 <script type="text/javascript">
-  import { Button } from 'vimo/components/button'
+  import { Button } from 'vimo/lib/button'
   export default{
     name: 'Index',
     data () {
