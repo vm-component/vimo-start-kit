@@ -2,9 +2,6 @@ import Vue from 'vue'
 import App from './App'
 import AttachFastClick from 'fastclick'
 import vimo from 'vimo'
-import { Navbar } from 'vimo/lib/navbar'
-import { Buttons, Title, Toolbar } from 'vimo/lib/toolbar'
-import { Button } from 'vimo/lib/button'
 import APP_CONFIGS from './config/app-configs'
 import PLATFORM_CONFIGS from './config/platform-configs'
 import router from './router'
@@ -33,13 +30,6 @@ Vue.use(vimo, {
   pltConf: PLATFORM_CONFIGS,
   router: router
 })
-
-// 基础组件
-Vue.component(Navbar.name, Navbar)
-Vue.component(Toolbar.name, Toolbar)
-Vue.component(Buttons.name, Buttons)
-Vue.component(Title.name, Title)
-Vue.component(Button.name, Button)
 
 if (process.env.NODE_ENV === 'development') {
   // 开发环境执行此代码
