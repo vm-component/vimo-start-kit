@@ -50,8 +50,7 @@
     </Page>
 </template>
 <script type="text/javascript">
-  import { Button } from 'vimo/lib/button'
-  export default{
+  export default {
     name: 'Index',
     data () {
       return {
@@ -66,11 +65,10 @@
           this.$i18n.locale = 'en'
         }
       }
-    },
-    components: {Button}
+    }
   }
 </script>
-<style scoped lang="scss">
+<style scoped lang="less">
     .index.scrollContent {
         width: 100%;
         height: 100%;

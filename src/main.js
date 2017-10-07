@@ -9,6 +9,14 @@ import VueI18n from 'vue-i18n'
 import langCN from './lang/cn'
 import langEN from './lang/en'
 
+import Button from 'vimo/lib/button'
+import { Buttons, Title, Toolbar } from 'vimo/lib/toolbar'
+
+Vue.component(Button.name, Button)
+Vue.component(Toolbar.name, Toolbar)
+Vue.component(Buttons.name, Buttons)
+Vue.component(Title.name, Title)
+
 // Create VueI18n instance with options
 Vue.use(VueI18n)
 const i18n = new VueI18n({

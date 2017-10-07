@@ -28,12 +28,13 @@
 </template>
 <script type="text/javascript">
   // 全局组件
-  import { ActionSheet } from 'vimo/lib/action-sheet'
-  import { Alert } from 'vimo/lib/alert'
-  import { Loading } from 'vimo/lib/loading'
-  import { Toast } from 'vimo/lib/toast'
+  import ActionSheet from 'vimo/lib/action-sheet'
+
+  import Alert from 'vimo/lib/alert'
+  import Loading from 'vimo/lib/loading'
+  import Toast from 'vimo/lib/toast'
   import { Segment, SegmentButton } from 'vimo/lib/segment'
-  import { ChooseCity } from 'vimo/lib/choose-city'
+  import ChooseCity from 'vimo/lib/choose-city'
 
   export default {
     name: 'Components',
@@ -173,14 +174,7 @@
         }, 2000)
       }
     },
-    created () {},
-    mounted () {},
-    activated () {},
-    deactivate () {},
-    components: {Segment, SegmentButton},
-    destroyed () {}
+    components: {Segment, SegmentButton}
   }
 </script>
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="less"></style>
