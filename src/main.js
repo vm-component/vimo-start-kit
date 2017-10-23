@@ -60,6 +60,7 @@ new Vue({
     window.VM.platform.ready().then((data) => {
       console.log(`当前平台初始化完毕的信息: ${data}`)
     })
+    console.log(1)
   },
   components: {
     App

@@ -38,11 +38,6 @@ export default {
       settings: {
         hideNavBar: true
       }
-    },
-    dtdream: {
-      settings: {
-        hideNavBar: true
-      }
     }
   },
   domain: 'http://localhost:3000'
