@@ -15,7 +15,7 @@
     "fastclick": "^1.0.6",
     "iscroll": "^5.2.0",
     "velocity-animate": "^1.5.0",
-    "vimo": "^0.7.10",
+    "vimo": "^0.8.1",
     "vue": "^2.4.2",
     "vue-i18n": "^7.0.4",
     "vue-router": "^2.2.0"
@@ -66,6 +66,7 @@
     "webpack": "^3.5.5",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
+    "webpack-encoding-plugin": "^0.2.1",
     "webpack-hot-middleware": "^2.16.1",
     "webpack-merge": "^2.6.1"
   },
