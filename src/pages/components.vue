@@ -28,13 +28,7 @@
 </template>
 <script type="text/javascript">
   // 全局组件
-  import ActionSheet from 'vimo/lib/action-sheet'
-
-  import Alert from 'vimo/lib/alert'
-  import Loading from 'vimo/lib/loading'
-  import Toast from 'vimo/lib/toast'
-  import { Segment, SegmentButton } from 'vimo/lib/segment'
-  import ChooseCity from 'vimo/lib/choose-city'
+  import { ActionSheet, Alert, Loading, Toast, Segment, SegmentButton, ChooseCity } from 'vimo'
 
   export default {
     name: 'Components',

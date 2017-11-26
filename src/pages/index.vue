@@ -5,7 +5,7 @@
                 <Title :title="$t('index.title')"></Title>
             </Navbar>
         </Header>
-        <Content padding>
+        <Content>
             <article class="index scrollContent">
                 <section padding class="vimo">
                     <section class="vimo__logo">
@@ -65,7 +65,8 @@
           this.$i18n.locale = 'en'
         }
       }
-    }
+    },
+    mounted () {}
   }
 </script>
 <style scoped lang="less">
@@ -73,6 +74,7 @@
         width: 100%;
         height: 100%;
         display: flex;
+        position: absolute;
         justify-content: center;
         align-content: center;
         .vimo {
