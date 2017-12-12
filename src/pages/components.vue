@@ -38,9 +38,6 @@
         selectCity: {}
       }
     },
-    props: {},
-    watch: {},
-    computed: {},
     methods: {
       showActionSheet () {
         ActionSheet.present({

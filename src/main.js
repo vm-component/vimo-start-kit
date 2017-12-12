@@ -1,7 +1,6 @@
 import Vue from 'vue'
-import AppComponent from './App'
+import AppComponent from './App.vue'
 import AttachFastClick from 'fastclick'
-import Vimo from 'vimo/src/install'
 import APP_CONFIGS from './config/app-configs'
 import PLATFORM_CONFIGS from './config/platform-configs'
 import router from './router'
@@ -9,11 +8,11 @@ import VueI18n from 'vue-i18n'
 import langCN from './lang/cn'
 import langEN from './lang/en'
 
-import { App, Button, Buttons, Content, Footer, Header, Nav, Navbar, Page, Title, Toolbar } from 'vimo'
+import { App, Button, Buttons, Content, Footer, Header, Install, Nav, Navbar, Page, Title, Toolbar } from 'vimo'
 
 // -----------------
 // 平台基础安装
-Vue.use(Vimo, {
+Vue.use(Install, {
   custConf: APP_CONFIGS,
   pltConf: PLATFORM_CONFIGS,
   router: router
@@ -62,4 +61,3 @@ new Vue({
     AppComponent
   }
 })
-

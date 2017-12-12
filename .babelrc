@@ -14,7 +14,7 @@
       "import",
       {
         "libraryName": "vimo",
-        "libraryDirectory": "src/components"
+        "libraryDirectory": "lib/components"
       }
     ]
   ]
