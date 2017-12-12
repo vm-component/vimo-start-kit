@@ -23,10 +23,10 @@
                         </section>
                     </section>
                     <section class="vimo__btns">
-                        <Button block solid @click="$router.push({name:'introduction'})">
+                        <Button color="primary" block solid @click="$router.push({name:'introduction'})">
                             {{$t('index.introduction')}}
                         </Button>
-                        <Button block solid @click="$router.push({name:'components'})">
+                        <Button color="danger" block solid @click="$router.push({name:'components'})">
                             {{$t('index.component')}}
                         </Button>
                         <Button block solid @click="switchLanguage">
